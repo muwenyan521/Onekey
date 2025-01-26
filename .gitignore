@@ -172,3 +172,10 @@ config.json
 /main.dist
 /.vscode
 /.vs
+Thumbs.db
+Desktop.ini
+.idea/
+dist/
+build/
+*.spec
+*.log

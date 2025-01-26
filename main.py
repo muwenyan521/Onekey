@@ -38,10 +38,10 @@ def prompt_app_id() -> str:
     """
     while True:
         app_id = input(f"{Fore.CYAN}{Back.BLACK}{
-                       Style.BRIGHT}请输入游戏AppID: {Style.RESET_ALL}").strip()
+                       Style.BRIGHT}📝 请输入游戏AppID: {Style.RESET_ALL}").strip()
         if re.match(r'^\d+$', app_id):
             return app_id
-        print(f"{Fore.RED}无效的AppID, 请输入数字!{Style.RESET_ALL}")
+        print(f"{Fore.RED}❌ 无效的AppID, 请输入数字!{Style.RESET_ALL}")
 
 async def main_loop() -> None:
     """
@@ -52,12 +52,12 @@ async def main_loop() -> None:
             app_id = prompt_app_id()
             await main(app_id, repos)
         except KeyboardInterrupt:
-            log.info("程序已退出")
+            log.info("🛑 程序已退出")
             break
         except EOFError:
             break
         except Exception as e:
-            log.error(f"处理AppID时发生错误: {stack_error(e)}")
+            log.error(f"❌ 处理AppID时发生错误: {stack_error(e)}")
             await asyncio.sleep(1)
 
 async def run() -> None:
@@ -65,18 +65,18 @@ async def run() -> None:
     主运行函数，处理程序生命周期
     """
     try:
-        log.info('App ID可以在SteamDB或Steam商店链接页面查看')
+        log.info('ℹ️ App ID可以在SteamDB或Steam商店链接页面查看')
         await main_loop()
     except KeyboardInterrupt:
-        log.info("程序已退出")
+        log.info("🛑 程序已退出")
     except Exception as e:
-        log.error(f'发生错误: {stack_error(e)}, 将在5秒后退出')
+        log.error(f'❌ 发生错误: {stack_error(e)}, 将在5秒后退出')
         await asyncio.sleep(5)
 
 if __name__ == '__main__':
     try:
         asyncio.run(run())
     except KeyboardInterrupt:
-        log.info("程序已退出")
+        log.info("🛑 程序已退出")
     except SystemExit:
         sys.exit()

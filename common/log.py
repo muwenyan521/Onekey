@@ -1,24 +1,48 @@
 import logging
 import colorlog
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union
+from logging.handlers import RotatingFileHandler
+
 
 class LogConfig:
     """日志配置类"""
-    def __init__(self):
-        self.level: int = logging.DEBUG
-        self.log_dir: Optional[Path] = None
-        self.max_bytes: int = 10 * 1024 * 1024  # 10MB
-        self.backup_count: int = 5
+    def __init__(
+        self,
+        level: int = logging.DEBUG,
+        log_dir: Optional[Union[str, Path]] = None,
+        max_bytes: int = 10 * 1024 * 1024,  # 10MB
+        backup_count: int = 5,
+        console_format: str = '%(log_color)s[%(levelname)s]%(message)s',
+        log_colors: Optional[dict] = None,
+        file_format: str = '%(asctime)s - %(levelname)s - %(message)s'
+    ):
+        self.level = level
+        self.log_dir = Path(log_dir) if log_dir is not None else None
+        self.max_bytes = max_bytes
+        self.backup_count = backup_count
+        self.console_format = console_format
+        self.log_colors = log_colors or {
+            'DEBUG': 'blue',
+            'INFO': 'cyan',
+            'WARNING': 'yellow',
+            'ERROR': 'red',
+            'CRITICAL': 'purple'
+        }
+        self.file_format = file_format
 
-DEFAULT_LOG_FORMAT = '%(log_color)s%(asctime)s - %(levelname)s - %(message)s'
-LOG_COLORS = {
-    'DEBUG': 'blue',
-    'INFO': 'cyan',
-    'WARNING': 'yellow',
-    'ERROR': 'red',
-    'CRITICAL': 'purple',
-}
+
+def _add_handler(
+    logger: logging.Logger,
+    handler: logging.Handler,
+    level: int,
+    formatter: logging.Formatter
+) -> None:
+    """统一配置处理器并添加到日志器"""
+    handler.setLevel(level)
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
 
 def init_log(config: Optional[LogConfig] = None) -> logging.Logger:
     """
@@ -36,31 +60,35 @@ def init_log(config: Optional[LogConfig] = None) -> logging.Logger:
     logger = logging.getLogger('Onekey')
     logger.setLevel(config.level)
 
-    # 清除已有处理器
-    logger.handlers.clear()
+    # 清除已有处理器防止重复记录
+    for handler in logger.handlers[:]:
+        logger.removeHandler(handler)
 
     # 控制台日志处理器
+    console_formatter = colorlog.ColoredFormatter(
+        config.console_format,
+        log_colors=config.log_colors
+    )
     stream_handler = logging.StreamHandler()
-    stream_handler.setLevel(config.level)
-    fmt = colorlog.ColoredFormatter(DEFAULT_LOG_FORMAT, log_colors=LOG_COLORS)
-    stream_handler.setFormatter(fmt)
-    logger.addHandler(stream_handler)
+    _add_handler(logger, stream_handler, config.level, console_formatter)
 
     # 文件日志处理器
     if config.log_dir:
-        config.log_dir.mkdir(parents=True, exist_ok=True)
-        log_file = config.log_dir / 'onekey.log'
-        file_handler = logging.handlers.RotatingFileHandler(
-            log_file,
-            maxBytes=config.max_bytes,
-            backupCount=config.backup_count,
-            encoding='utf-8'
-        )
-        file_handler.setLevel(config.level)
-        file_fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(file_fmt)
-        logger.addHandler(file_handler)
+        try:
+            config.log_dir.mkdir(parents=True, exist_ok=True)
+            log_file = config.log_dir / 'onekey.log'
+            file_handler = RotatingFileHandler(
+                log_file,
+                maxBytes=config.max_bytes,
+                backupCount=config.backup_count,
+                encoding='utf-8'
+            )
+            file_formatter = logging.Formatter(config.file_format)
+            _add_handler(logger, file_handler, config.level, file_formatter)
+        except OSError as e:
+            logger.error(f"Failed to initialize file handler: {e}")
 
     return logger
 
+# 模块级日志实例
 log = init_log()
