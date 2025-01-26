@@ -1,11 +1,11 @@
 <div align="center">
 
-![Onekey](https://socialify.git.ci/ikunshare/Onekey/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Auto)
+![Onekey](https://socialify.git.ci/muwenyan521/Onekey/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Auto)
 
-![GitHub Repo Size](https://img.shields.io/github/repo-size/ikunshare/Onekey?style=for-the-badge)
-[![GitHub Release (with filter)](https://img.shields.io/github/v/release/ikunshare/Onekey?style=for-the-badge)](https://github.com/ikunshare/Onekey/releases/latest)
-[![GitHub All Releases](https://img.shields.io/github/downloads/ikunshare/Onekey/total?style=for-the-badge&color=violet)](https://github.com/ikunshare/Onekey/releases)
-[![GitHub License](https://img.shields.io/github/license/ikunshare/Onekey?style=for-the-badge)](https://github.com/ikunshare/Onekey/blob/main/LICENSE)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/muwenyan521/Onekey?style=for-the-badge)
+[![GitHub Release (with filter)](https://img.shields.io/github/v/release/muwenyan521/Onekey?style=for-the-badge)](https://github.com/muwenyan521/Onekey/releases/latest)
+[![GitHub All Releases](https://img.shields.io/github/downloads/muwenyan521/Onekey/total?style=for-the-badge&color=violet)](https://github.com/muwenyan521/Onekey/releases)
+[![GitHub License](https://img.shields.io/github/license/muwenyan521/Onekey?style=for-the-badge)](https://github.com/muwenyan521/Onekey/blob/main/LICENSE)
 
 </div>
 
@@ -27,7 +27,7 @@ Onekey Steam Depot Manifest Downloader
 1.克隆项目到本地 
 
 ```
-git clone https://github.com/ikunshare/Onekey
+git clone https://github.com/muwenyan521/Onekey
 ```
 
 2.安装依赖
@@ -53,12 +53,12 @@ pip install -r requirements.txt
 
 ## Star 趋势图
 
- [![Stargazers over time](https://starchart.cc/ikunshare/Onekey.svg)](https://starchart.cc/ikunshare/Onekey)
+ [![Stargazers over time](https://starchart.cc/muwenyan521/Onekey.svg)](https://starchart.cc/muwenyan521/Onekey)
 
 ## 贡献者
 
- <a href="https://github.com/ikunshare/Onekey/graphs/contributors">
-   <img src="https://contrib.rocks/image?repo=ikunshare/Onekey" />
+ <a href="https://github.com/muwenyan521/Onekey/graphs/contributors">
+   <img src="https://contrib.rocks/image?repo=muwenyan521/Onekey" />
  </a>
 
 ## 常见问题解答（FAQ）
@@ -66,5 +66,5 @@ pip install -r requirements.txt
 
 ## 社区和支持
 加入我们的社区，参与讨论和支持: 
-- [GitHub Discussions](https://github.com/ikunshare/Onekey/discussions)
+- [GitHub Discussions](https://github.com/muwenyan521/Onekey/discussions)
 - [Telegram](https://t.me/ikunshare_qun)
