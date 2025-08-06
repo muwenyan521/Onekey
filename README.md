@@ -1,33 +1,44 @@
 <div align="center">
 
-![Onekey](https://socialify.git.ci/muwenyan521/Onekey/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Auto)
+![Onekey](https://socialify.git.ci/ikunshare/Onekey/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Auto)
 
-![GitHub Repo Size](https://img.shields.io/github/repo-size/muwenyan521/Onekey?style=for-the-badge)
-[![GitHub Release (with filter)](https://img.shields.io/github/v/release/muwenyan521/Onekey?style=for-the-badge)](https://github.com/muwenyan521/Onekey/releases/latest)
-[![GitHub All Releases](https://img.shields.io/github/downloads/muwenyan521/Onekey/total?style=for-the-badge&color=violet)](https://github.com/muwenyan521/Onekey/releases)
-[![GitHub License](https://img.shields.io/github/license/muwenyan521/Onekey?style=for-the-badge)](https://github.com/muwenyan521/Onekey/blob/main/LICENSE)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/ikunshare/Onekey?style=for-the-badge)
+[![GitHub Release (with filter)](https://img.shields.io/github/v/release/ikunshare/Onekey?style=for-the-badge)](https://github.com/ikunshare/Onekey/releases/latest)
+[![GitHub All Releases](https://img.shields.io/github/downloads/ikunshare/Onekey/total?style=for-the-badge&color=violet)](https://github.com/ikunshare/Onekey/releases)
+[![GitHub License](https://img.shields.io/github/license/ikunshare/Onekey?style=for-the-badge)](https://github.com/ikunshare/Onekey/blob/main/LICENSE)
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
 
 </div>
 
-
 ## Onekey
-Onekey Steam Depot Manifest Downloader
+
+Onekey Steam Depot Manifest Downloader  
+对本软件有意见的
+欢迎拨打中华人民共和国公安部门报警电话：110 进行报警
+
+## 先让我挂些人
+
+- 沧海颐粟，早期倒卖大手子，现在不知道跑哪了，通过一点手段查到在江西
+- 玩家资源站，贼喊捉贼笑传，随便改改别人软件的名字就是自己的，还去报官了
 
 ## 使用方法
-去Releases处下载最新的发布，并且安装好SteamTools或者GreenLuma  
-然后打开Onekey输入App ID即可使用
+
+去 Releases 处下载最新的发布，并且安装好 SteamTools 或者 GreenLuma  
+然后打开 Onekey 输入 App ID 即可使用
 
 ## 开发
-本程序使用Python编程语言开发   
-要求环境:    
-1.Python 3.10及以上   
-2.Windows 10及以上   
-3.使用Git进行版本管理   
 
-1.克隆项目到本地 
+本程序使用 Python 编程语言开发  
+要求环境:  
+1.Python 3.10 及以上  
+2.Windows 10 及以上  
+3.使用 Git 进行版本管理
+
+1.克隆项目到本地
 
 ```
-git clone https://github.com/muwenyan521/Onekey
+git clone https://github.com/ikunshare/Onekey
 ```
 
 2.安装依赖
@@ -36,8 +47,8 @@ git clone https://github.com/muwenyan521/Onekey
 pip install -r requirements.txt
 ```
 
-## 项目协议
- 本项目基于 GPL-3.0 许可证发行，以下协议是对于 GPL-3.0 原协议的补充，如有冲突，以以下协议为准。
+<!-- ## 项目协议
+ 本项目基于 GPL-2.0 许可证发行，以下协议是对于 GPL-2.0 原协议的补充，如有冲突，以以下协议为准。
 
  词语约定: “使用者”指签署本协议的使用者;“版权数据”指包括但不限于图像、音频、名字等在内的他人拥有所属版权的数据。
 
@@ -48,22 +59,27 @@ pip install -r requirements.txt
  而且，本项目已禁止使用于商业用途，以及不得进行未经允许的二次修改，否则必须同时发布源代码。
  若你使用了本项目，将代表你接受以上协议。
 
- Steam正版平台不易，请尊重版权，支持正版。  
- 本项目仅用于对技术可行性的探索及研究，不接受任何商业（包括但不限于广告等）合作。  
+ Steam正版平台不易，请尊重版权，支持正版。
+ 本项目仅用于对技术可行性的探索及研究，不接受任何商业（包括但不限于广告等）合作。   -->
 
 ## Star 趋势图
 
- [![Stargazers over time](https://starchart.cc/muwenyan521/Onekey.svg)](https://starchart.cc/muwenyan521/Onekey)
+[![Stargazers over time](https://starchart.cc/ikunshare/Onekey.svg)](https://starchart.cc/ikunshare/Onekey)
 
 ## 贡献者
 
- <a href="https://github.com/muwenyan521/Onekey/graphs/contributors">
-   <img src="https://contrib.rocks/image?repo=muwenyan521/Onekey" />
+ <a href="https://github.com/ikunshare/Onekey/graphs/contributors">
+   <img src="https://contrib.rocks/image?repo=ikunshare/Onekey" />
  </a>
 
 ## 常见问题解答（FAQ）
-查看 [FAQ](https://ikunshare.com/d/49) 获取常见问题的解答。
+
+查看 [FAQ](https://ikunshare.top/d/49) 获取常见问题的解答。
 
 ## 社区和支持
-加入我们的社区，参与讨论和支持: 
+
+加入我们的社区，参与讨论和支持:
+
+- [GitHub Discussions](https://github.com/ikunshare/Onekey/discussions)
 - [Telegram](https://t.me/ikunshare_qun)
+- [QQ](https://qm.qq.com/q/NPRVbglteK)

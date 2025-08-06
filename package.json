@@ -1,6 +1,6 @@
 {
   "name": "onekey",
-  "version": "1.3.6",
+  "version": "2.0.5",
   "description": "一个Steam仓库清单下载器",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muwenyan521/Onekey.git"
+    "url": "git+https://github.com/ikunshare/Onekey.git"
   },
   "keywords": [
     "Onekey"
   ],
   "author": "ikun0014",
-  "license": "GPL-3.0",
+  "license": "null",
   "bugs": {
-    "url": "https://github.com/muwenyan521/Onekey/issues"
+    "url": "https://github.com/ikunshare/Onekey/issues"
   },
-  "homepage": "https://github.com/muwenyan521/Onekey#readme"
+  "homepage": "https://github.com/ikunshare/Onekey#readme"
 }
